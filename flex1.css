@@ -1,100 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Ben</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="flex1.css">
-</head>
-<body>
-    <div class="container">
-        <header class="header">
-            <h1>Benhar Kumar</h1>
-            <p>Full Stack Developer</p>
-        </header>
-        <div class="content">
-            <!-- Left Column -->
-            <div class="left-column">
-                <section class="contact">
-                    <h2>Contact</h2>
-                    <ul>
-                        <li>+1 513-302-5059</li>
-                        <li>Ben@email.com</li>
-                        <li>Ohio, Cincinnati</li>
-                        <li>www.ben.com</li>
-                    </ul>
-                </section>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-                <section class="education">
-                    <h2>Education</h2>
-                    <p>
-                        <strong>2017 - 2021</strong> <br />
-                        Bachelors in Electronics and Communication <br />
-                        Anits College
-                    </p>
-                </section>
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
 
-                <section class="skills">
-                    <h2>Skills</h2>
-                    <ul>
-                        <li>Web Development</li>
-                        <li>Project Management</li>
-                        <li>Digital Marketing</li>
-                        <li>Data Analysis</li>
-                    </ul>
-                </section>
-            </div>
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
 
-            <!-- Right Column -->
-            <div class="right-column">
-                <section class="profile-summary">
-                    <h2>Profile Summary</h2>
-                    <p>
-                        Full Stack Developer with a passion for creating dynamic and responsive web applications. Proficient in both front-end and back-end technologies including JavaScript, React, Node.js, Express, and MongoDB. Adept at building scalable, efficient, and user-friendly solutions.
-                    </p>
-                </section>
+.header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
 
-                <section class="work-experience">
-                    <h2>Work Experience</h2>
-                    <div class="job">
-                        <h3>Web Developer</h3>
-                        <p><strong>2020 - 2022</strong></p>
-                        <p>Accenture</p>
-                        <ul>
-                            <li>Developed and executed digital marketing strategies leading to a 15% growth in organic website traffic.</li>
-                            <li>Collaborated with the content team to create SEO-optimized content, increasing search engine rankings.</li>
-                        </ul>
-                    </div>
-                </section>
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #003366;
+}
 
-                <!-- Contact Form Section -->
-                <section class="contact-form">
-                    <h2>Contact Me</h2>
-                    <form action="#">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
+.header p {
+    font-size: 1.2rem;
+    color: #666;
+}
 
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
 
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" id="phone" name="phone">
+.left-column {
+    width: 30%;
+}
 
-                        <label for="role">Role:</label>
-                        <input type="radio" id="technical" name="role" value="Technical">
-                        <label for="technical">Technical</label>
-                        <input type="radio" id="non-technical" name="role" value="Non-Technical">
-                        <label for="non-technical">Non-Technical</label>
+.contact,
+.education,
+.skills {
+    margin-bottom: 20px;
+}
 
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
+h2 {
+    font-size: 1.5rem;
+    color: #003366;
+    margin-bottom: 10px;
+}
 
-                        <button type="submit">Submit</button>
-                    </form>
-                </section>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Right column */
+
+.right-column {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-summary p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.work-experience .job {
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    font-size: 1.2rem;
+    color: #003366;
+}
+
+.job p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.job ul {
+    margin-top: 10px;
+}
+
+.job ul li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Contact Form */
+
+.contact-form {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 1.5rem;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form input[type="radio"] {
+    margin-right: 5px;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #0055a5;
+}
