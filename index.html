@@ -3,102 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Ben</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
+    <title>Registration Form</title>
     <link rel="stylesheet" href="flex1.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>Benhar Kumar</h1>
-            <p>Full Stack Developer</p>
-        </header>
-        <div class="content">
-            <!-- Left Column -->
-            <div class="left-column">
-                <section class="contact">
-                    <h2>Contact</h2>
-                    <ul>
-                        <li>+1 513-302-5059</li>
-                        <li>Ben@email.com</li>
-                        <li>Ohio, Cincinnati</li>
-                        <li>www.ben.com</li>
-                    </ul>
-                </section>
+    <form action="submit_form.php" method="post" enctype="multipart/form-data">
+        <h2>Registration Form</h2>
 
-                <section class="education">
-                    <h2>Education</h2>
-                    <p>
-                        <strong>2017 - 2021</strong> <br />
-                        Bachelors in Electronics and Communication <br />
-                        Anits College
-                    </p>
-                </section>
+        <!-- Name -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-                <section class="skills">
-                    <h2>Skills</h2>
-                    <ul>
-                        <li>Web Development</li>
-                        <li>Project Management</li>
-                        <li>Digital Marketing</li>
-                        <li>Data Analysis</li>
-                    </ul>
-                </section>
-            </div>
+        <!-- Username -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
-            <!-- Right Column -->
-            <div class="right-column">
-                <section class="profile-summary">
-                    <h2>Profile Summary</h2>
-                    <p>
-                        Full Stack Developer with a passion for creating dynamic and responsive web applications. Proficient in both front-end and back-end technologies including JavaScript, React, Node.js, Express, and MongoDB. Adept at building scalable, efficient, and user-friendly solutions.
-                    </p>
-                </section>
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-                <section class="work-experience">
-                    <h2>Work Experience</h2>
-                    <div class="job">
-                        <h3>Web Developer</h3>
-                        <p><strong>2020 - 2022</strong></p>
-                        <p>Accenture</p>
-                        <ul>
-                            <li>Developed and executed digital marketing strategies leading to a 15% growth in organic website traffic.</li>
-                            <li>Collaborated with the content team to create SEO-optimized content, increasing search engine rankings.</li>
-                        </ul>
-                    </div>
-                </section>
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
 
-                <!-- Contact Form Section -->
-                <section class="contact-form">
-                    <h2>Contact Me</h2>
-                    <form action="#">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
+        <!-- Confirm Password -->
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
 
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+        <!-- Country Code and Phone Number -->
+        <label for="country_code">Country Code:</label>
+        <select id="country_code" name="country_code" required>
+            <option value="+1">+1 (USA)</option>
+            <option value="+44">+44 (UK)</option>
+            <option value="+91">+91 (India)</option>
+            <!-- Add more country codes as needed -->
+        </select>
 
-                        <label for="dob">Date of Birth:</label>
-                        <input type="date" id="dob" name="dob" required 
-                            max="2004-11-01">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
 
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" id="phone" name="phone">
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" max="2004-11-03" required>
 
-                        <label for="role">Role:</label>
-                        <input type="radio" id="technical" name="role" value="Technical">
-                        <label for="technical">Technical</label>
-                        <input type="radio" id="non-technical" name="role" value="Non-Technical">
-                        <label for="non-technical">Non-Technical</label>
-
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="4"></textarea>
-
-                        <button type="submit">Submit</button>
-                    </form>
-                </section>
-            </div>
+        <!-- Gender -->
+        <label>Gender:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="Male" required> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
         </div>
-    </div>
+
+        <!-- Hobbies -->
+        <label>Hobbies:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="hobby_reading" value="Reading"> Reading</label>
+            <label><input type="checkbox" name="hobby_sports" value="Sports"> Sports</label>
+            <label><input type="checkbox" name="hobby_music" value="Music"> Music</label>
+            <label><input type="checkbox" name="hobby_traveling" value="Traveling"> Traveling</label>
+        </div>
+
+        <!-- Upload Button -->
+        <label for="profile_picture">Upload Profile Picture:</label>
+        <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+
+        <!-- Submit Button -->
+        <button type="submit">Register</button>
+    </form>
 </body>
 </html>
