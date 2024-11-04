@@ -1,162 +1,85 @@
+/* Basic reset */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+/* Center the form on the page */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-.header {
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #e0e0e0;
-}
-
-.header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #003366;
-}
-
-.header p {
-    font-size: 1.2rem;
-    color: #666;
-}
-
-.content {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
 }
 
-.left-column {
-    width: 30%;
-}
-
-.contact,
-.education,
-.skills {
-    margin-bottom: 20px;
+/* Form styling */
+form {
+    background-color: #fff;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-size: 1.5rem;
-    color: #003366;
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-ul li {
-    margin-bottom: 5px;
-    font-size: 1rem;
+    text-align: center;
     color: #333;
-}
-
-/* Right column */
-
-.right-column {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-}
-
-.profile-summary p {
-    margin-bottom: 20px;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-.work-experience .job {
     margin-bottom: 20px;
 }
 
-.job h3 {
-    font-size: 1.2rem;
-    color: #003366;
-}
-
-.job p {
-    font-size: 1rem;
-    color: #666;
-}
-
-.job ul {
-    margin-top: 10px;
-}
-
-.job ul li {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Contact Form */
-
-.contact-form {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form h2 {
-    font-size: 1.5rem;
-    color: #003366;
-    margin-bottom: 15px;
-}
-
-.contact-form label {
+label {
     display: block;
-    font-size: 1rem;
-    color: #333;
-    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"],
-.contact-form textarea {
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+.radio-group,
+input[type="file"] {
     width: 100%;
     padding: 8px;
-    margin-top: 5px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 1rem;
 }
 
-.contact-form input[type="radio"] {
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio-group label {
+    font-weight: normal;
+    width: auto;
+}
+
+input[type="radio"] {
     margin-right: 5px;
 }
 
-.contact-form button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #003366;
-    color: white;
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
     font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-    background-color: #0055a5;
+button:hover {
+    background-color: #0056b3;
 }
